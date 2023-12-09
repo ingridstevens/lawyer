@@ -1,6 +1,8 @@
 # German Lawyer 
 Disclaimer: this is not a lawyer, and is not meant to be used as one. This tool is meant to help bridge the information gap between the German legal system and the average person. It is not meant to be used as a substitute for a lawyer.
 
+![German Lawyer](/img/german-law.jpeg)
+
 ## What is this?
 This is a RAG (Retrieval Augmented Generation) notebook that uses open source models to answer legal questions about residency in Germany. It is a RAG which takes information from the [Aufenthaltsverordnung (AufenthV)](https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html) and (in the future) the Aufenthaltsgesetz (AufenthG) and answers questions about residency in Germany.
 
