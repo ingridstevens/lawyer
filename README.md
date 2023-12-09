@@ -1,4 +1,4 @@
-# German Lawyer 
+# Not a German Lawyer 
 Disclaimer: this is not a lawyer, and is not meant to be used as one. This tool is meant to help bridge the information gap between the German legal system and the average person. It is not meant to be used as a substitute for a lawyer.
 
 ![German Lawyer](/img/german-law.jpeg)
