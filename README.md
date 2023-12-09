@@ -6,6 +6,8 @@ This is a RAG (Retrieval Augmented Generation) notebook that uses open source mo
 
 ## How does it work?
 This notebook splits, tokenizes, and embeds the text of the AufenthV and does a semantic search between a user query (i.e. "How long can I stay in Germany?") and the text of the AufenthV. It then uses the top n results to generate an answer to the question using an open source LLM.
+This means that you can interact with the law (which is written in German) in English and get an answer to your question also in English.
+Semantic search (wonderfully) seems to work very well across languages, so you can also ask questions in German and get an answer in German.
 
 ## How do I use it?
 You can use this notebook to answer questions about residency in Germany. You can also use it to answer questions about other topics, but you will need to change the text of the AufenthV to the text of the law you want to use.
