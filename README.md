@@ -23,5 +23,7 @@ You can use this notebook to answer questions about residency in Germany. You ca
 ## How do I run it?
 You can run this notebook locally on your computer. For this to work, you will need Ollama installed and running a local model. You can adjust the code in the notebook `rag-residence-law.ipynb` to reflect the model you want to use.
 
-
-
+## Ongoing TO DOs
+- [ ] Try out different vector databases (Qdrant is suspiciously slow)
+- [ ] Try out different models (e.g. orca 2, giraffe, mixtral, etc.)
+- [ ] Add in more files (e.g. AufenthG)
