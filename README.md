@@ -14,6 +14,12 @@ Semantic search (wonderfully) seems to work very well across languages, so you c
 ## How do I use it?
 You can use this notebook to answer questions about residency in Germany. You can also use it to answer questions about other topics, but you will need to change the text of the AufenthV to the text of the law you want to use.
 
+**Some example questions you can ask:**
+- How long can I stay in Germany?
+- How long can I stay in Germany if I am a student?
+- How long can I stay in Germany if I am a student and I have a job?
+- How do I get a Blue Card?
+
 ## How do I run it?
 You can run this notebook locally on your computer. For this to work, you will need Ollama installed and running a local model. You can adjust the code in the notebook `rag-residence-law.ipynb` to reflect the model you want to use.
 
