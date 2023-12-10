@@ -38,6 +38,8 @@ Navigate to the notebook `rag-residence-law.ipynb` and run the cells.
 - langchain: Language processing library (custom)
 - qdrant: Vector database library
 
+When you run `pip install -r requirements.txt`, you will install the required libraries.
+
 ## Downloads Required 
 
 **The project relies on Ollama for embeddings and language modeling:**
