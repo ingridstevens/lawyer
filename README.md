@@ -9,15 +9,15 @@ This guide provides detailed instructions on setting up and running the German R
 
 ## Setup Steps
 
-Navigate to the directory you want to be in for this project
+1. Navigate to the directory you want to be in for this project
 
-(Optional: create a virtual environment **venv** and activate it):
+2. (Optional: create a virtual environment **venv** and activate it):
 
 `python -m venv venv`
 
 `source venv/bin/activate`
 
-Clone the repository:
+3. Clone the repository:
 
 `git clone https://github.com/ingridstevens/lawyer.git`
 
@@ -25,7 +25,7 @@ Clone the repository:
 
 `pip install -r requirements.txt`
 
-Run Jupyer Notebook:
+4. Run Jupyer Notebook:
 
 `jupyter notebook`
 
