@@ -1,1 +1,2 @@
 langchain==0.0.348
+unstructured==0.7.12
