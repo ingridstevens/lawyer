@@ -3,15 +3,41 @@ Disclaimer: this is not a lawyer, and is not meant to be used as one. This tool 
 
 ![German Lawyer](/img/german-law.jpeg)
 
-## What is this?
-This is a RAG (Retrieval Augmented Generation) notebook that uses open source models to answer legal questions about residency in Germany. It is a RAG which takes information from the [Aufenthaltsverordnung (AufenthV)](https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html) and (in the future) the Aufenthaltsgesetz (AufenthG) and answers questions about residency in Germany.
+## Overview
+
+This guide provides detailed instructions on setting up and running the German Residency Law Assistant project. Ensure you follow each step to have the necessary libraries installed and successfully execute the notebook.
+
+## Setup Steps
+
+`git clone https://github.com/ingridstevens/lawyer.git`
+
+`cd lawyer`
+
+`pip install -r requirements.txt`
+
+## Libraries Used
+
+**The project utilizes the following Python libraries:**
+
+- langchain: Language processing library (custom)
+- qdrant: Vector database library
+
+## Downloads Required 
+
+**The project relies on Ollama for embeddings and language modeling:**
+- [Ollama](https://ollama.ai): Embeddings and language modeling library
+    - install mistral (or your model of choice) with `ollama run mistral`
+
+---- 
 
 ## How does it work?
+
+This is a RAG (Retrieval Augmented Generation) notebook that uses open source models to answer legal questions about residency in Germany. It is a RAG which takes information from the [Aufenthaltsverordnung (AufenthV)](https://www.gesetze-im-internet.de/aufenthv/BJNR294510004.html) and (in the future) the Aufenthaltsgesetz (AufenthG) and answers questions about residency in Germany.
+
 This notebook splits, tokenizes, and embeds the text of the AufenthV and does a semantic search between a user query (i.e. "How long can I stay in Germany?") and the text of the AufenthV. It then uses the top n results to generate an answer to the question using an open source LLM.
 This means that you can interact with the law (which is written in German) in English and get an answer to your question also in English.
 Semantic search (wonderfully) seems to work very well across languages, so you can also ask questions in German and get an answer in German.
 
-## How do I use it?
 You can use this notebook to answer questions about residency in Germany. You can also use it to answer questions about other topics, but you will need to change the text of the AufenthV to the text of the law you want to use.
 
 **Some example questions you can ask:**
