@@ -25,7 +25,17 @@ This guide provides detailed instructions on setting up and running the German R
 
 `pip install -r requirements.txt`
 
-4. Run Jupyer Notebook:
+4. Install Ollama & Models
+ 
+- download Ollama from [here](https://ollama.ai) and follow the instructions to install it.
+- download the models you want to use. this notebook uses the following models and the models can be installed by running the following commands:
+    - mistral `ollama run mistral`
+    - llama2 `ollama run llama2`
+    - openhermes2.5-mistral:7b-q5_K_M `ollama run openhermes2.5-mistral:7b-q5_K_M`
+
+For a complete list of models: `ollama list` or visit [ollama.ai/library](https://ollama.ai/library)
+
+5. Run Jupyer Notebook:
 
 `jupyter notebook`
 
