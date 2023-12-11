@@ -1,2 +1,6 @@
-langchain==0.0.348
+langchain==0.0.316
 unstructured==0.7.12
+openai==0.28.10
+chromadb==0.4.17
+tiktoken==0.5.1
+qdrant-client==1.6.4
