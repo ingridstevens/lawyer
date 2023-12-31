@@ -3,6 +3,14 @@ Disclaimer: this is not a lawyer, and is not meant to be used as one. This tool 
 
 ![German Lawyer](/img/german-law.jpeg)
 
+# Evaluation
+I took the [list of FAQs from the German Federal Foreign Office website](https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/-/606852?openAccordionId=item-606664-0-panel) and used them to evaluate the model. 
+
+There are two sets of questions, one is in questions.txt the other in questions_2.txt.
+
+They are both in English, but the laws are in German. This does not appear to be a problem.
+
+
 ## Overview
 
 This guide provides detailed instructions on setting up and running the German Residency Law Assistant project. Ensure you follow each step to have the necessary libraries installed and successfully execute the notebook.
@@ -25,17 +33,19 @@ This guide provides detailed instructions on setting up and running the German R
 
 `pip install -r requirements.txt`
 
-4. Install Ollama & Models
+
+#### IF USING THE LOCAL VERSION (Install Ollama & Models)
+
+##### Downlaods Required: Install Ollama & Models
  
 - download Ollama from [here](https://ollama.ai) and follow the instructions to install it.
 - download the models you want to use. this notebook uses the following models and the models can be installed by running the following commands:
     - mistral `ollama run mistral`
-    - llama2 `ollama run llama2`
-    - openhermes2.5-mistral:7b-q5_K_M `ollama run openhermes2.5-mistral:7b-q5_K_M`
 
 For a complete list of models: `ollama list` or visit [ollama.ai/library](https://ollama.ai/library)
 
-5. Run Jupyer Notebook:
+
+4. Run Jupyer Notebook:
 
 `jupyter notebook`
 
@@ -43,18 +53,7 @@ Navigate to the notebook `rag-residence-law.ipynb` and run the cells.
 
 ## Libraries Used
 
-**The project utilizes the following Python libraries:**
-
-- langchain: Language processing library (custom)
-- qdrant: Vector database library
-
-When you run `pip install -r requirements.txt`, you will install the required libraries.
-
-## Downloads Required 
-
-**The project relies on Ollama for embeddings and language modeling:**
-- [Ollama](https://ollama.ai): Embeddings and language modeling library
-    - install mistral (or your model of choice) with `ollama run mistral`
+Run `pip install -r requirements.txt`, to install the required libraries.
 
 ---- 
 
