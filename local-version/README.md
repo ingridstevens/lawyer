@@ -23,6 +23,7 @@ This version of the German Residency Law Assistant is designed for users who pre
 
 ### Download Ollama & Models
 
+Open another tab in terminal with Command-T(⌘T) and run the following commands:
 - Download Ollama from [here](https://ollama.ai) and follow the installation instructions.
 - Download the models you want to use. Run the following command to download and run mistral (~4GB):
 
@@ -33,6 +34,15 @@ This version of the German Residency Law Assistant is designed for users who pre
     For a complete list of models: `ollama list` or visit [ollama.ai/library](https://ollama.ai/library).
 
 4. Run Jupyter Notebook:
+If you have Anaconda installed, you should already have Jupyter Notebook. If not, run the following command:
+
+    ```bash
+    pip install jupyter
+    ```
+Please see this [Jupyter Notebook Installation Help Page](https://docs.jupyter.org/en/latest/install/notebook-classic.html) for more information on installing Jupyter Notebook.
+
+
+Go back to the first terminal tab and run the following command:
 
     ```bash
     jupyter notebook
