@@ -14,25 +14,6 @@ The **Remote Version** is hosted remotely, eliminating the need for local instal
 
 ## Project Structure
 
-/project-root
-|-- local-version
-| |-- README.md
-| |-- src
-| |-- requirements.txt
-| |-- ... (other local version files)
-|
-|-- remote-version
-| |-- README.md
-| |-- src
-| |-- ... (other remote version files)
-|
-|-- img
-|-- questions.txt
-|-- questions_2.txt
-|-- README.md (main README)
-|-- ...
-
-
 Choose the version that aligns with your preferences and requirements. For specific details, navigate to the respective READMEs linked above.
 
 ## Additional Resources
