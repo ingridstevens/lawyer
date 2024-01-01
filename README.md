@@ -73,16 +73,3 @@ You can use this notebook to answer questions about residency in Germany. You ca
 - **Multilingual Support:** You can interact with the German legal text in English, and vice versa. Semantic search functions well across languages.
 - **Customization:** Users can modify the code to answer questions on different legal topics by replacing the text of the AufenthV with the desired law.
 
-**Some example questions you can ask:**
-- How long can I stay in Germany?
-- How long can I stay in Germany if I am a student?
-- How long can I stay in Germany if I am a student and I have a job?
-- How do I get a Blue Card?
-
-## How do I run it?
-You can run this notebook locally on your computer. For this to work, you will need Ollama installed and running a local model. You can adjust the code in the notebook `rag-residence-law.ipynb` to reflect the model you want to use.
-
-## Ongoing TO DOs
-- [ ] Try out different vector databases (Qdrant is suspiciously slow)
-- [ ] Try out different models (e.g. orca 2, giraffe, mixtral, etc.)
-- [ ] Add in more files (e.g. AufenthG)
