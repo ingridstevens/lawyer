@@ -24,7 +24,7 @@ This version of the German Residency Law Assistant is designed for users who pre
 ### Download Ollama & Models
 
 - Download Ollama from [here](https://ollama.ai) and follow the installation instructions.
-- Download the required models. Run the following commands:
+- Download the models you want to use. Run the following command to download and run mistral (~4GB):
 
     ```bash
     ollama run mistral
