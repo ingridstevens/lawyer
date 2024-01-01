@@ -44,6 +44,7 @@ This version of the German Residency Law Assistant is designed for users who pre
 
 Run `pip install -r requirements.txt` to install the necessary libraries.
 
+
 ---
 
 ## How does it work?
@@ -57,3 +58,29 @@ The notebook tokenizes and embeds the text of the AufenthV, enabling semantic se
 - **Semantic Search:** The notebook conducts semantic searches between user queries and legal text, facilitating accurate information retrieval.
 - **Multilingual Support:** Interaction with German legal text in English and vice versa is supported. Semantic search functions effectively across languages.
 - **Customization:** Users can adapt the code to address questions on various legal topics by substituting the text of the AufenthV with the desired legal text.
+
+
+
+## Setting Up Langsmith for Evaluation
+
+To evaluate the German Residency Law Assistant using Langsmith, follow these steps:
+
+### Langsmith
+
+1. **Create a Langsmith Account:**
+   - If you don't have a Langsmith account, sign up [here](https://langsmith.com/). - note that this is in beta, so you need to request access.
+
+2. **Obtain Langsmith API Key and Project Name:**
+   - After signing in, retrieve your LangChain API Key and Project Name from the Langsmith dashboard.
+
+3. **Set Langsmith Environmental Variables:**
+   - Before you start the evaluation, set the following environmental variables:
+     - `LANGCHAIN_TRACING_V2=true`
+     - `LANGCHAIN_API_KEY`: Your LangChain API Key.
+     - `LANGCHAIN_PROJECT`: Your Langsmith Project Name.
+
+### Using Langsmith for Evaluation
+
+Once you have set up the Langsmith environmental variables, you can use Langsmith for evaluating the German Residency Law Assistant's performance.
+
+Please refer to the [LangSmith Documentation](https://api.smith.langchain.com/redoc) for more information on how to use the tool.
