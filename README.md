@@ -1,6 +1,6 @@
 # Not a Lawyer: German Residency Law Assistant
 
-!(img/german-law.jpeg)
+!(/img/german-law.jpeg)
 
 Welcome to the German Residency Law Assistant project! This tool helps bridge the information gap between the German legal system and the general public, offering assistance with residency-related queries.
 

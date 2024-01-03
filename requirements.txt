@@ -3,3 +3,5 @@ unstructured
 openai
 chromadb
 tiktoken
+
+streamlit
