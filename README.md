@@ -2,7 +2,11 @@
 
 ![Not a German Lawyer](/img/german-law.jpeg)
 
-Welcome to the German Residency Law Assistant project! This tool helps bridge the information gap between the German legal system and the general public, offering assistance with residency-related queries.
+Welcome to the German Residency Law Assistant project! This tool in the form of a Jupyter notebook helps bridge the information gap between the German legal system and the general public, offering assistance with residency-related queries.
+
+It's designed to be an easy way to ask questions about the german laws relating to residencey, and get answers which relate to your specific situation. It is not meant to replace a lawyer, but rather to help you understand the laws and how they apply to you. 
+
+Let's reduce information asymmetry!
 
 ## Versions
 
