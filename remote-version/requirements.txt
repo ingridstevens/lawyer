@@ -1,0 +1,6 @@
+pinecone-client
+langchain
+openai
+langchain_openai
+gradio
+lxml
