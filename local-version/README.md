@@ -8,9 +8,9 @@ This version of the German Residency Law Assistant is designed for users who pre
 
 2. (Optional: create a virtual environment **venv** and activate it):
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
+    ```
+    conda create -n rag-laws python=3.10
+    conda activate rag-laws
     ```
 
 3. Clone the repository:
@@ -18,7 +18,6 @@ This version of the German Residency Law Assistant is designed for users who pre
     ```bash
     git clone https://github.com/ingridstevens/lawyer.git
     cd lawyer
-    pip install -r requirements.txt
     ```
 
 ### Download Ollama & Models
