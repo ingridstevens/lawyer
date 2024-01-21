@@ -39,9 +39,16 @@ Before you start, you will need to set up the following environmental variables:
    - Set the environmental variable:
      - `OPENAI_API_KEY`: Your OpenAI API Key.
 
+## Create a Virtual Environment 
+
+```
+conda create -n rag-laws python=3.10
+conda activate rag-laws
+```
+
 ## Libraries Used
 
-Run `pip install -r requirements.txt` to install the necessary libraries.
+Run the top cell  `! pip install langchain langchain_openai gradio lxml pinecone-client` to install the necessary libraries.
 
 ## Using the Remote Version
 
