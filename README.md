@@ -1,6 +1,6 @@
 # Not a Lawyer: German Residency Law Assistant
 
-![Not a German Lawyer](/img/german-law.jpeg)
+![Not a German Lawyer](/img/german-law0.jpeg)
 
 Welcome to the German Residency Law Assistant project! This tool in the form of a Jupyter notebook helps bridge the information gap between the German legal system and the general public, offering assistance with residency-related queries.
 
