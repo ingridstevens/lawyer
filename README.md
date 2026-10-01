@@ -10,13 +10,13 @@ Let's reduce information asymmetry!
 
 ## Versions
 
-### [Local Version](./local-version/README.md)
+### [Local Version](./legacy/local-version/README.md)
 
-The **Local Version** is designed for users who prefer running the German Residency Law Assistant on their local machine. It involves the installation of additional components such as Ollama and specific models. Follow the instructions in the [Local Version README](./local-version/README.md) for setup.
+The **Local Version** is designed for users who prefer running the German Residency Law Assistant on their local machine. It involves the installation of additional components such as Ollama and specific models. Follow the instructions in the [Local Version README](./legacy/local-version/README.md) for setup.
 
-### [Remote Version](./remote-version/README.md)
+### [Remote Version](./legacy/remote-version/README.md)
 
-The **Remote Version** is hosted remotely, eliminating the need for local installations. Users can access and interact with the German Residency Law Assistant without dealing with additional dependencies. Refer to the [Remote Version README](./remote-version/README.md) for instructions on using the hosted version.
+The **Remote Version** is hosted remotely, eliminating the need for local installations. Users can access and interact with the German Residency Law Assistant without dealing with additional dependencies. Refer to the [Remote Version README](./legacy/remote-version/README.md) for instructions on using the hosted version.
 
 ## Project Structure
 

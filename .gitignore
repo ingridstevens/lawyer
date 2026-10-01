@@ -1,1 +1,8 @@
 __pycache__
+.env
+.venv/
+env/
+.DS_Store
+.build/
+.swiftpm/
+build/
