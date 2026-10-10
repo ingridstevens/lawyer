@@ -1,8 +1,14 @@
+<p align="center">
+  <img width="110" alt="Not a Lawyer app icon: a blue section sign over a yellow highlighter stroke" src="https://github.com/user-attachments/assets/de1da72b-7767-4916-8add-69afba10e3c9" />
+</p>
+
 # Not a Lawyer
+
+A Mac app that explains German residency and citizenship law in your own language. Every answer quotes the exact paragraph of the law it's based on, word for word from the official text, and the model that writes it runs on your Mac. Your questions, your details and your documents never leave it.
+
 
 <img width="1276" height="921" alt="image" src="https://github.com/user-attachments/assets/a99054d1-c4fb-4795-9fbf-5d4a68491819" />
 
-A Mac app that explains German residency and citizenship law in your own language. Every answer quotes the exact paragraph of the law it's based on, word for word from the official text, and the model that writes it runs on your Mac. Your questions, your details and your documents never leave it.
 
 **This is not legal advice.** The app explains what the law says; it never decides whether you qualify. For a binding answer about your case, ask your Ausländerbehörde, a free Migrationsberatung, or a lawyer for migration law.
 
