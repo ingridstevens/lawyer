@@ -1,7 +1,5 @@
 # Not a Lawyer
 
-![Not a German Lawyer](/img/german-law0.jpeg)
-
 A Mac app that explains German residency and citizenship law in your own language. Every answer quotes the exact paragraph of the law it's based on, word for word from the official text, and the model that writes it runs on your Mac. Your questions, your details and your documents never leave it.
 
 **This is not legal advice.** The app explains what the law says; it never decides whether you qualify. For a binding answer about your case, ask your Ausländerbehörde, a free Migrationsberatung, or a lawyer for migration law.
