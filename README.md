@@ -1,6 +1,6 @@
 # Not a Lawyer
 
-![Not a German Lawyer](/img/german-law0.jpeg)
+<img width="1150" height="810" alt="image" src="https://github.com/user-attachments/assets/5897da29-504e-48b7-813e-8e79b457f89a" />
 
 A Mac app that explains German residency and citizenship law in your own language. Every answer quotes the exact paragraph of the law it's based on, word for word from the official text, and the model that writes it runs on your Mac. Your questions, your details and your documents never leave it.
 
