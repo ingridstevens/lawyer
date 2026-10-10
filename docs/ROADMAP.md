@@ -128,7 +128,7 @@ A big task of its own: go through the whole app as a first-time user and find an
 
 ### 6. Design and UX review (10 October)
 
-Reviewed from the user's screenshots, the source, and the tester agent's report (computer use wasn't available to see the live app). Ranked by impact.
+Reviewed from the user's screenshots, the source, and the tester agent's report (computer use wasn't available to see the live app). Ranked by impact. **Tracked as GitHub issues [#2–#24](https://github.com/ingridstevens/lawyer/issues)** (labels P0/P1/P2); close them there and tick them here.
 
 **P0: the core promise isn't kept yet**
 - [ ] **Speed and reliability come first.** Answers take 70–150 s on an M1 Pro, and Apple's model, the default on first run, gives the worst answers. Everything else is secondary until a question gets a correct answer in under a minute. → stream the answer, shorter answers, try granite4.2:8b, full evaluation.
