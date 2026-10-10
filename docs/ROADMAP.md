@@ -126,6 +126,47 @@ A big task of its own: go through the whole app as a first-time user and find an
 - [ ] Unofficial MCP servers exist (rechtsinformationen-bund-de-mcp, de-eli-mcp, german-law-mcp, gesetzessuche, gesetze-mcp). Not for the app (privacy), but possibly for development: letting tester agents check answer keys and the app's answers against official sources. Vet any package before installing.
 - [ ] Who could do the legal review, and is there a free route (university law clinic, Refugee Law Clinic)?
 
+### 6. Design and UX review (10 October)
+
+Reviewed from the user's screenshots, the source, and the tester agent's report (computer use wasn't available to see the live app). Ranked by impact.
+
+**P0: the core promise isn't kept yet**
+- [ ] **Speed and reliability come first.** Answers take 70–150 s on an M1 Pro, and Apple's model, the default on first run, gives the worst answers. Everything else is secondary until a question gets a correct answer in under a minute. → stream the answer, shorter answers, try granite4.2:8b, full evaluation.
+- [ ] **First run sets people up to fail.** A new user meets the disclaimer, then an 11-card setup, and their first question goes to Apple's model; choosing a better model is buried in Settings. Make first run: disclaimer → "choose how answers are made" (recommended model for this Mac, with a download progress bar) → three optional setup questions (language, status, goal) → first question. Everything else later, when it's needed.
+- [ ] **Answer first, law second.** An answer page today stacks: explanation, "What the law requires", related documents, "In your plan", then one statute block per citation, each with a summary, the German paragraph, a translation and labels, then "where to ask" and "Answered by". It's thorough but long, and the reply to the question can get lost. Restructure:
+  1. a short direct answer (two or three sentences) with a confidence line ("clear from the law" / "the authority decides" / "check with an advisor", R28);
+  2. the conditions as a compact list, each linked to its paragraph;
+  3. "Show the law" expanding the statute excerpts;
+  4. one line for plan and documents ("3 of these are in your plan · you have 2 of the documents").
+
+**P1: structure and mental model**
+- [ ] **Too many places for "about me".** Situation, memory, goals, a chat's goal, chat notes, plans and documents are seven overlapping concepts. Make the **goal** the hub: a goal (e.g. Einbürgerung) holds its plan, its chats, its notes and the documents that matter for it. Situation and documents stay global. Memory and chat notes merge into "notes" with a scope (this chat / this goal / everywhere).
+- [ ] **The sidebar mixes kinds of things** (chats, documents, help, plans). Group by goal: each goal with its plan and chats beneath; then "My documents", "Get help", and "Other chats".
+- [ ] **Interface language.** Everything around the answers is English; refusals and errors appear in English exactly when someone is stuck. Localise the interface (R18), errors and refusals first.
+- [ ] **Plain words over system words.** "Answered by qwen3.5:4b in 72 seconds", "Ghost chat", "Looked at", "engine" mean little to most users. "Answered on this Mac in about a minute"; "Private chat (doesn't use your details)"; "Sections I read"; "how answers are made".
+- [ ] **Errors as directions.** Some errors still show technical text ("The model server answered with error 500 …", "wasn't in the expected format"). Each should say what happened in plain words and offer one action: try again, use the recommended model, or ask a free advisor.
+
+**P1: features users expect**
+- [ ] **Explain a letter from the authority (R9).** Probably the most common real need: "What does this Bescheid mean, and is there a deadline?" Drop in a PDF or photo; it's read on the Mac; the app explains it, finds the cited law, and puts any deadline first (R32).
+- [ ] **Reminders.** "My permit expires on 3 May", "appointment on Tuesday": local notifications, a few weeks before. Fits the plans and the visit checklist.
+- [ ] **Share an answer as a PDF** to bring to an advisor or appointment (the contact prep already prints).
+- [ ] **Search across chats and documents.**
+- [ ] **"This answer is wrong" button**, saving the question and answer locally for the evaluation set (nothing sent).
+- [ ] **Lock with Touch ID**, since My documents may hold a passport and a residence card.
+
+**P2: visual design**
+- [ ] **One button language.** Links, bordered, prominent and plain buttons are mixed for similar actions (e.g. "What does this mean?" as a link, "Stop" bordered, plan ticks as plain icons). Define: primary action = prominent; secondary = bordered; inline navigation = link.
+- [ ] **The margin layout everywhere, or nowhere.** The 76 pt gutter with DIN section numbers works well in answers, but on the home screen, plans and help pages it reads as an unexplained empty column. Keep it for statute excerpts; use a normal centred column elsewhere.
+- [ ] **Type scale.** Answers use title3 body text, which is large for long German quotes; quotes in the serif at body size are good. Settle on: question bubble title3, explanation body (17 pt), quotes serif body, labels caption.
+- [ ] **Contrast.** Several captions are secondary grey at caption size, below comfortable contrast for long reading. Check WCAG AA, especially the warnings and "machine translation" notes.
+- [ ] **Repeated labels.** "Machine translation…" and "Official text as of …" repeat under every quote. Say it once per answer.
+- [ ] **Icons.** SF Symbols are chosen ad hoc across sidebar, settings, help and home cards. Use one consistent set per concept (law = book, plan = checklist, documents = folder, help = person.2).
+
+**P2: accessibility and polish**
+- [ ] VoiceOver pass: chat bubbles, tracker, plan ticks, the statute highlight (the highlight must also be announced, not only shown in yellow).
+- [ ] Keyboard: ⌘↩ to send, arrow keys through chats, Esc closes every overlay.
+- [ ] Window title repeats the first question; empty states for Plans and Help.
+
 ---
 
 ## Who this app is for
