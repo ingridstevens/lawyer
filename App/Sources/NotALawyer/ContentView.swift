@@ -104,6 +104,17 @@ struct Sidebar: View {
             }
 
             Section("Plans") {
+                // Without a goal every plan is listed; say why, and where to narrow it down.
+                if Plan.suggested(for: model.settings.situation).isEmpty {
+                    Button { model.settingsTab = .situation } label: {
+                        Text("No goal set yet, so all plans are shown. Set your goal to see the one that fits you.")
+                            .font(.caption).foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .contentShape(.rect)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Set your goal in your situation")
+                }
                 ForEach(model.visiblePlans) { plan in
                     let done = plan.steps.filter { model.isDone($0, in: plan) }.count
                     Label {
@@ -326,7 +337,8 @@ struct ConversationView: View {
         .background { if model.currentChat.ghost { GhostBackground() } else { PageBackground() } }
         .backgroundExtensionEffect(isEnabled: false)
         .environment(\.colorScheme, model.currentChat.ghost ? .dark : colorScheme)
-        .navigationTitle(model.currentChat.title)
+        // The first question is already on screen as a bubble; only a name the user chose is worth repeating.
+        .navigationTitle(model.currentChat.renamed ? model.currentChat.title : "Not a Lawyer")
         .navigationSubtitle(model.currentChat.ghost ? "Ghost chat · \(model.providerName)" : model.providerName)
         .onAppear { inputFocused = true }
     }

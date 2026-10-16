@@ -165,7 +165,7 @@ Reviewed from the user's screenshots, the source, and the tester agent's report 
 **P2: accessibility and polish**
 - [ ] VoiceOver pass: chat bubbles, tracker, plan ticks, the statute highlight (the highlight must also be announced, not only shown in yellow).
 - [ ] Keyboard: ⌘↩ to send, arrow keys through chats, Esc closes every overlay.
-- [ ] Window title repeats the first question; empty states for Plans and Help.
+- [x] Window title repeats the first question; empty states for Plans and Help. Title shows "Not a Lawyer" until a chat is renamed; Plans explains when no goal is set (#24).
 
 ---
 
@@ -448,7 +448,7 @@ Multi-turn test cases, each turn building on the one before. They're run as a se
 - [ ] Export: include the documents themselves, not only the list.
 - [ ] Highlight fade may not animate (attributed-string backgrounds don't interpolate); check, use an overlay if needed.
 - [ ] Accessibility audit: VoiceOver labels, keyboard-only use, larger text; right-to-left check for Arabic and Persian.
-- [ ] Window title repeats the first question; consider "Not a Lawyer" until a chat is renamed.
+- [x] Window title repeats the first question; now "Not a Lawyer" until a chat is renamed (#24).
 - [ ] Speech input: only English has an on-device model on this Mac; other languages need Dictation enabled in System Settings. Consider macOS 26's `SpeechAnalyzer`.
 
 ### Release
