@@ -148,6 +148,11 @@ Reviewed from the user's screenshots, the source, and the tester agent's report 
 
 **P1: features users expect**
 - [ ] **Explain a letter from the authority (R9).** Probably the most common real need: "What does this Bescheid mean, and is there a deadline?" Drop in a PDF or photo; it's read on the Mac; the app explains it, finds the cited law, and puts any deadline first (R32).
+  - [x] M0: read a letter on the Mac (PDFKit, Vision OCR, or pasted text), pick out dates, deadlines, time spans, amounts, reference numbers and cited laws by rule (`LetterFacts`), flag hard-to-read lines and laws outside the five, and let the reader confirm each one beside the original. In memory only; saving to My documents is opt-in.
+  - [ ] M1: local model explains the letter, every statement traced to a snippet; synthetic letter set and `nal-eval letters`.
+  - [ ] M2: cited sections through retrieval and the citation check; translation.
+  - [ ] M3: help section, German reply draft and phone script with the reference number, redacted export.
+  - [ ] M4: privacy audit, Continuity Camera, VoiceOver pass, legal review.
 - [ ] **Reminders.** "My permit expires on 3 May", "appointment on Tuesday": local notifications, a few weeks before. Fits the plans and the visit checklist.
 - [ ] **Share an answer as a PDF** to bring to an advisor or appointment (the contact prep already prints).
 - [ ] **Search across chats and documents.**

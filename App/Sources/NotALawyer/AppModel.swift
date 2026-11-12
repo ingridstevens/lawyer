@@ -122,6 +122,7 @@ struct Chat: Identifiable, Codable {
 enum SidebarItem: Hashable {
     case chat(UUID)
     case documents
+    case letter
     case plan(String)
     case helpResources
     case prepareContact
@@ -183,6 +184,10 @@ final class AppModel {
     var importingDocument = false
     /// The type to file the next added documents under, when the user picked one first.
     var importKind: DocumentKind?
+
+    /// The letter being checked. In memory only, and dropped on close unless saved to My documents.
+    var letter: LetterReading?
+    var readingLetter = false
 
     /// Document types the user's plans usually need and that they haven't added yet.
     var missingDocumentKinds: [DocumentKind] {
@@ -333,6 +338,37 @@ final class AppModel {
 
     /// Questions in the chat on screen.
     var exchanges: [Exchange] { currentChat.exchanges }
+
+    // MARK: Letters
+
+    /// Reads a letter on this Mac and shows it for checking. Nothing is copied or written to disk.
+    func openLetter(_ url: URL) {
+        let name = url.deletingPathExtension().lastPathComponent
+        readLetter(name: name, url: url) { LetterReader.read(url) }
+    }
+
+    func openLetter(pasted text: String) {
+        readLetter(name: "Pasted letter", url: nil) { LetterReader.Source(lines: LetterReader.lines(pasted: text)) }
+    }
+
+    private func readLetter(name: String, url: URL?, read: @escaping @Sendable () -> LetterReader.Source) {
+        letter = nil
+        readingLetter = true
+        sidebarSelection = .letter
+        let covered = Set(index?.laws ?? [])
+        Task {
+            let source = await Task.detached(priority: .userInitiated, operation: read).value
+            letter = LetterReading(name: name, url: url, pages: source.pages, lines: source.lines, coveredLaws: covered)
+            readingLetter = false
+        }
+    }
+
+    /// Opt-in: copies the letter's file into My documents, where it's sorted like any other document.
+    func saveLetterToDocuments() throws {
+        guard let url = letter?.url else { return }
+        _ = try documents.add(url)
+        letter?.savedToDocuments = true
+    }
 
     func newChat(ghost: Bool = false) {
         // Reuse an empty chat instead of piling them up.

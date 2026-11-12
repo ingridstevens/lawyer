@@ -37,6 +37,7 @@ struct RootView: View {
             switch model.sidebarSelection {
             case .chat: ConversationView()
             case .documents: DocumentsView()
+            case .letter: LetterView()
             case .plan(let id):
                 if let plan = Plan.all.first(where: { $0.id == id }) { PlanView(plan: plan) }
             case .helpResources: HelpResourcesView()
@@ -86,6 +87,9 @@ struct Sidebar: View {
             }
 
             Section("Your things") {
+                Label("Read a letter", systemImage: "envelope.open")
+                    .tag(SidebarItem.letter)
+                    .help("Check the dates, deadlines and numbers in a letter from an authority. Read on this Mac.")
                 Label {
                     HStack {
                         Text("My documents")

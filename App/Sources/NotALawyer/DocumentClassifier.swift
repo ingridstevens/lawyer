@@ -1,6 +1,5 @@
 import Foundation
 import PDFKit
-import Vision
 
 /// Sorts a document by what it says, on this Mac: PDFKit reads PDFs, Vision reads photos and
 /// scans. The text is used only to choose the type, a language level and a date; it isn't sent
@@ -40,15 +39,7 @@ enum DocumentClassifier {
     }
 
     static func recognise(_ image: CGImage) async -> String {
-        await withCheckedContinuation { continuation in
-            let request = VNRecognizeTextRequest { request, _ in
-                let lines = (request.results as? [VNRecognizedTextObservation])?.compactMap { $0.topCandidates(1).first?.string } ?? []
-                continuation.resume(returning: lines.joined(separator: "\n"))
-            }
-            request.recognitionLevel = .accurate
-            request.recognitionLanguages = ["de-DE", "en-US"]
-            do { try VNImageRequestHandler(cgImage: image).perform([request]) } catch { continuation.resume(returning: "") }
-        }
+        LetterReader.recogniseLines(image).map(\.text).joined(separator: "\n")
     }
 
     // MARK: Sorting
