@@ -169,7 +169,7 @@ Reviewed from the user's screenshots, the source, and the tester agent's report 
 
 **P2: accessibility and polish**
 - [ ] VoiceOver pass: chat bubbles, tracker, plan ticks, the statute highlight (the highlight must also be announced, not only shown in yellow).
-- [ ] Keyboard: ⌘↩ to send, arrow keys through chats, Esc closes every overlay.
+- [x] Keyboard: ⌘↩ to send, arrow keys through chats, Esc closes every overlay. ↩ or ⌘↩ sends and focus returns to the question; ⌥⌘↑/↓ moves between chats while typing; Esc also skips setup on its first card (#23).
 - [x] Window title repeats the first question; empty states for Plans and Help. Title shows "Not a Lawyer" until a chat is renamed; Plans explains when no goal is set (#24).
 
 ---

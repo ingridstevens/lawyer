@@ -25,6 +25,11 @@ struct NotALawyerApp: App {
                 Button("New Chat") { model.newChat() }.keyboardShortcut("n")
                 Button("New Ghost Chat") { model.newChat(ghost: true) }.keyboardShortcut("n", modifiers: [.command, .shift])
             }
+            // Works while typing a question, where the arrow keys move the cursor instead.
+            CommandMenu("Chat") {
+                Button("Previous Chat") { model.selectChat(offset: -1) }.keyboardShortcut(.upArrow, modifiers: [.command, .option])
+                Button("Next Chat") { model.selectChat(offset: 1) }.keyboardShortcut(.downArrow, modifiers: [.command, .option])
+            }
             CommandGroup(after: .newItem) {
                 Button("Add Documents…") { model.sidebarSelection = .documents; model.importKind = nil; model.importingDocument = true }
                     .keyboardShortcut("o")
