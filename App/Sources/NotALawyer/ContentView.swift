@@ -428,6 +428,8 @@ struct ConversationView: View {
             .help(speech.isListening ? "Stop listening" : "Speak your question (⇧⌘D). Recognised on this Mac only.")
             .accessibilityLabel(speech.isListening ? "Stop listening" : "Speak your question")
             SendButton(enabled: canSend, action: send)
+                .keyboardShortcut(.return, modifiers: .command)
+                .help("Ask (↩ or ⌘↩)")
         }
         .padding(.leading, 20)
         .padding(.trailing, 10)
@@ -445,6 +447,7 @@ struct ConversationView: View {
         speech.stop()
         model.ask(question)
         question = ""
+        inputFocused = true
     }
 }
 

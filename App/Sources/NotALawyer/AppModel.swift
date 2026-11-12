@@ -336,6 +336,17 @@ final class AppModel {
 
     var currentChat: Chat { chats.first { $0.id == currentChatID }! }
 
+    /// Moves to the chat above (-1) or below (1) in the sidebar, which lists the newest first.
+    /// From anywhere other than a chat, goes to the newest one.
+    func selectChat(offset: Int) {
+        let shown = Array(chats.reversed())
+        guard case .chat(let id) = sidebarSelection, let index = shown.firstIndex(where: { $0.id == id }) else {
+            if let newest = shown.first { sidebarSelection = .chat(newest.id) }
+            return
+        }
+        sidebarSelection = .chat(shown[min(max(index + offset, 0), shown.count - 1)].id)
+    }
+
     /// Questions in the chat on screen.
     var exchanges: [Exchange] { currentChat.exchanges }
 

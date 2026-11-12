@@ -40,7 +40,7 @@ struct SituationQuiz: View {
                 if path.count > 1 {
                     Button("Back") { go(back: true) }.keyboardShortcut(.cancelAction)
                 } else {
-                    Button("Skip setup") { finish(save: false) }
+                    Button("Skip setup") { finish(save: false) }.keyboardShortcut(.cancelAction)
                 }
                 Spacer()
                 if step == .summary {
